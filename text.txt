@@ -1,0 +1,9 @@
+:
+1) Modernize
+Outdated control systems bring unnecessary cost and complexity
+2) Link Hardware + Software
+Configure heating, cooling, lighting, and miscellaneous equipment to be optimized for proper usage
+3) Sensors
+New generation sensors and hardware can intelligently adapt to changing scenarios
+4) Monitor
+Monitor real time metrics to find anomalies, trends, and usage patterns

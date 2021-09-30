@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Raleway", sans-serif;
+}
+.head {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	background: #141414;
+	position: fixed;
+	top: 0;
+	height: 35px;
+	z-index: 100;
+}
+.logo {
+	text-decoration: none;
+}
+.logo a img {
+	max-width: 9%;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+label {
+	display: none;
+}
+
+nav li {
+	display: inline;
+}
+
+#nav-button {
+	display: none;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	padding: 0px 10px;
+}
+nav a:hover {
+	color: #bbbbbb;
+	transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 736px) and (orientation: portrait) {
+	nav {
+		align-items: center;
+	}
+	.head {
+		justify-content: space-between;
+		padding-right: 1rem;
+	}
+	.logo a img {
+		max-width: 34%;
+	}
+	nav ul {
+		position: absolute;
+		top: 34px;
+		right: 0;
+		width: 100%;
+		background: #1f1f1f;
+		max-height: 0;
+		transition: max-height 0.15s ease-out;
+		overflow: hidden;
+		transition: all 1s ease-in-out;
+	}
+
+	nav li {
+		display: block;
+		width: 100%;
+		padding: 5px;
+	}
+
+	label {
+		display: block;
+		padding: 0px 10px;
+		font-size: 30px;
+		cursor: pointer;
+		color: white;
+	}
+
+	label:hover {
+		color: white;
+	}
+
+	nav a {
+		width: 100%;
+		display: block;
+	}
+
+	#nav-button:checked ~ ul {
+		max-height: 540px;
+		transition: all 1s ease-in-out;
+	}
+
+	nav li:hover {
+		background: darkpurple;
+	}
+}
+
+/* Hero section */
+
+#hero {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)),
+		url("./brochure-images/brochure-images/cover.jpeg") no-repeat center bottom /
+			cover;
+	color: whitesmoke;
+}
+.container {
+	width: 90%;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+#hero .info h2 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+#hero .info h2 {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+#hero .info p {
+	font-size: 1.5rem;
+	max-width: 70%;
+}
+@media only screen and (max-width: 768px) {
+	/* html {
+		font-size: 10px;
+	} */
+}
+
+/* Service section cards */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-size: 1rem;
+	color: #fff;
+	font-weight: bold;
+}
+
+p {
+	margin-bottom: 1.5em;
+	color: #fff;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+.thumbnail img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 10px;
+}
+.div_blur_teste {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 10;
+	backdrop-filter: blur(40px);
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 178px;
+	-webkit-filter: blur(40px);
+	filter: blur(40px);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.card {
+	position: relative;
+	max-width: 350px;
+	height: 366px;
+	background-color: white;
+	transition: transform 2s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	margin: 2em;
+	border-radius: 5px;
+	perspective-origin: 50% 50%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.thumbnail {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+/* Fliper */
+.front,
+.back {
+	position: absolute;
+	backface-visibility: hidden;
+}
+.front {
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+.back {
+	transform: rotateY(180deg);
+	position: absolute;
+	background: white;
+	height: 364px;
+	width: 100%;
+	z-index: 2;
+	text-align: center;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+}
+.back p {
+	color: black;
+}
+.back_cont {
+	padding-top: 3rem;
+}
+.c3 {
+	font-size: 14px;
+}
+/* ..... */
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card a:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+	padding: 1.4em;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 10;
+	padding-top: 205px;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+
+/* Flexbox stuff */
+
+@media screen and (min-width: 40em) {
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.card {
+		flex: 0 1 calc(50% - 1em);
+	}
+}
+
+@media screen and (min-width: 60em) {
+	.card {
+		flex: 0 1 calc(25% - 1em);
+	}
+}
