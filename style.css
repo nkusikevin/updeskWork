@@ -306,3 +306,83 @@ strong {
 		flex: 0 1 calc(25% - 1em);
 	}
 }
+
+/* Contact section */
+
+.contact {
+	max-width: 81%;
+	height: 650px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	-webkit-box-shadow: 0px 0px 10px #c8c7d9;
+	box-shadow: 0px 0px 10px #c8c7d9;
+
+}
+
+.contact .contact-form {
+	background: #f8f8f8;
+	width: 100%;
+	height: 647px;
+}
+.contact .contact-form form{
+	width: 100%;
+}
+.contact .contact-form .title {
+	font-size: 2.5em;
+	font-family: "Libre Franklin", sans-serif;
+	font-weight: 700;
+	color: #242424;
+	margin: 5% 8%;
+}
+
+.contact .contact-form .subtitle {
+	font-size: 1.2em;
+	font-weight: 400;
+	margin: 0 4% 5% 8%;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+	width: 330px;
+	padding: 3%;
+	margin: 2% 8%;
+	color: #242424;
+	border: 1px solid #b7b7b7;
+}
+
+.contact .contact-form input::-webkit-input-placeholder,
+.contact .contact-form textarea::-webkit-input-placeholder {
+	color: #242424;
+}
+
+.contact .contact-form input:-ms-input-placeholder,
+.contact .contact-form textarea:-ms-input-placeholder {
+	color: #242424;
+}
+
+.contact .contact-form input::-ms-input-placeholder,
+.contact .contact-form textarea::-ms-input-placeholder {
+	color: #242424;
+}
+
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+	color: #242424;
+}
+
+.contact .contact-form .btn-send {
+	background: #a383c9;
+	width: 180px;
+	height: 60px;
+	color: #f8f8f8;
+	font-weight: 700;
+	margin: 2% 8%;
+	border: none;
+}
+ @media all and (max-width:480px) {
+ .contact .contact-form input,
+.contact .contact-form textarea {
+	width: 84%;
+}
+}
