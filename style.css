@@ -177,125 +177,90 @@ strong {
 	font-weight: bold;
 }
 
-.thumbnail img {
-	display: block;
-	border: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 2;
-	overflow: hidden;
-	width: 100%;
-	border-radius: 10px;
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
 }
-.div_blur_teste {
-	position: absolute;
-	left: 0%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	z-index: 10;
-	backdrop-filter: blur(40px);
-	display: block;
-	overflow: hidden;
-	width: 100%;
-	margin-top: 178px;
-	-webkit-filter: blur(40px);
-	filter: blur(40px);
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
+
 .card {
-	position: relative;
 	max-width: 350px;
-	height: 366px;
-	background-color: white;
+	height: 361px;
 	transition: transform 2s;
 	transform-style: preserve-3d;
 	cursor: pointer;
 	margin: 2em;
-	border-radius: 5px;
-	perspective-origin: 50% 50%;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-.thumbnail {
+
+.front{
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	backface-visibility: hidden;
+	/* height: 361px; */
 	width: 100%;
-	height: 100%;
-	z-index: 10;
 }
-/* Fliper */
-.front,
+
 .back {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	backface-visibility: hidden;
+	height: 361px;
+	width: 100%;
 }
 .front {
-	z-index: 10;
-	width: 100%;
-	height: 100%;
+	height: max-content;
 }
 .back {
-	transform: rotateY(180deg);
-	position: absolute;
 	background: white;
-	height: 364px;
-	width: 100%;
-	z-index: 2;
+	transform: rotateY(180deg);
+	padding: 1rem;
+	font-size: 14px;
 	text-align: center;
-	border-radius: 10px;
-	transform-style: preserve-3d;
 }
+
+.back h1 {
+	font-size: 14px;
+}
+
 .back p {
 	color: black;
 }
-.back_cont {
-	padding-top: 3rem;
-}
-.c3 {
-	font-size: 14px;
-}
-/* ..... */
-.card a {
-	color: black;
-	text-decoration: none;
+/* card  */
+
+h1 {
+	font-size: 24px;
+	font-weight: 400;
+	text-align: center;
 }
 
-.card a:hover {
-	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+.card_image img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
 }
 
-.card-content {
-	padding: 1.4em;
-	position: absolute;
-	left: 0%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	z-index: 10;
-	padding-top: 205px;
+.cards_item {
+	display: flex;
+	/* padding: 1rem; */
 }
 
-.card-content h2 {
-	margin-top: 0;
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
-
-.card-content p {
-	font-size: 80%;
-}
-
-/* Flexbox stuff */
-
-@media screen and (min-width: 40em) {
+@media (min-width: 40rem) {
+	.cards_item {
+		width: 100%;
+		max-height: 100%;
+	}
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-
 	.card {
 		flex: 0 1 calc(50% - 1em);
 	}
@@ -305,6 +270,47 @@ strong {
 	.card {
 		flex: 0 1 calc(25% - 1em);
 	}
+}
+@media (min-width: 56rem) {
+	.cards_item {
+		width: 100%;
+		max-height: 100%;
+	}
+}
+
+.crd {
+	background-color: white;
+	border-radius: 0.25rem;
+
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.card_content {
+	padding: 1rem;
+	background: #141414;
+	/* height: 164px; */
+}
+
+.card_title {
+	color: #ffffff;
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	margin: 0px;
+}
+
+.card_text {
+	color: #ffffff;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+	font-weight: 400;
+}
+.card_text ul{
+	padding-left: 1rem;
 }
 
 /* Contact section */
@@ -317,7 +323,6 @@ strong {
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	-webkit-box-shadow: 0px 0px 10px #c8c7d9;
 	box-shadow: 0px 0px 10px #c8c7d9;
-
 }
 
 .contact .contact-form {
@@ -325,7 +330,7 @@ strong {
 	width: 100%;
 	height: 647px;
 }
-.contact .contact-form form{
+.contact .contact-form form {
 	width: 100%;
 }
 .contact .contact-form .title {
@@ -380,9 +385,12 @@ strong {
 	margin: 2% 8%;
 	border: none;
 }
- @media all and (max-width:480px) {
- .contact .contact-form input,
-.contact .contact-form textarea {
-	width: 84%;
+.btn-send:hover {
+	background: #6d479b;
 }
+@media all and (max-width: 480px) {
+	.contact .contact-form input,
+	.contact .contact-form textarea {
+		width: 84%;
+	}
 }

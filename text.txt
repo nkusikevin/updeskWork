@@ -7,3 +7,389 @@ Configure heating, cooling, lighting, and miscellaneous equipment to be optimize
 New generation sensors and hardware can intelligently adapt to changing scenarios
 4) Monitor
 Monitor real time metrics to find anomalies, trends, and usage patterns
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229929.1760314769!2d-80.36954411689972!3d25.78234042826896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20Floride%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2srw!4v1633332719878!5m2!1sfr!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229929.1760314769!2d-80.36954411689972!3d25.78234042826896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20Floride%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2srw!4v1633332719878!5m2!1sfr!2srw
+
+
+
+
+.thumbnail img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 10px;
+}
+.div_blur_teste {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 10;
+	background-color: #141414;
+	/* backdrop-filter: blur(40px); */
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 178px;
+	/* -webkit-filter: blur(40px);
+	filter: blur(40px); */
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.card {
+	position: relative;
+	max-width: 350px;
+	height: 366px;
+	background-color: white;
+	transition: transform 2s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	margin: 2em;
+	border-radius: 5px;
+	perspective-origin: 50% 50%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.thumbnail {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+/* Fliper */
+.front,
+.back {
+	position: absolute;
+	backface-visibility: hidden;
+}
+.front {
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+.back {
+	transform: rotateY(180deg);
+	position: absolute;
+	background: white;
+	height: 364px;
+	width: 100%;
+	z-index: 2;
+	text-align: center;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+}
+.back p {
+	color: black;
+}
+.back_cont {
+	padding-top: 3rem;
+}
+.c3 {
+	font-size: 14px;
+}
+/* ..... */
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card a:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+	padding: 1.4em;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 10;
+	padding-top: 205px;
+}
+.card-content h1{
+	color: white;
+	font-weight: bold;
+}
+.card-content ul {
+	padding: 0 2rem;
+}
+.card-content ul li{
+	color: white;
+}
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+
+/* Flexbox stuff */
+
+@media screen and (min-width: 40em) {
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.card {
+		flex: 0 1 calc(50% - 1em);
+	}
+}
+
+@media screen and (min-width: 60em) {
+	.card {
+		flex: 0 1 calc(25% - 1em);
+	}
+}
+
+
+
+
+
+
+<article class="card" onclick="flip(event)">
+							<div class="front">
+								<picture class="thumbnail">
+									<img
+										src="https://media.istockphoto.com/photos/solar-panels-and-windmill-power-plant-picture-id513049543?b=1&k=20&m=513049543&s=170667a&w=0&h=6yXy2LbcLs5dxjZgrweqkTB12QqmYsXfkqRVksMbZvQ="
+										alt="Norwegian boller"
+									/>
+								</picture>
+								<div class="div_blur_teste"></div>
+								<div class="card-content">
+									<h1>Energy Storage</h1>
+									<hr />
+									<br />
+									<ul>
+										<li>Optimize Costs</li>
+										<li>Backup Power</li>
+										<li>Improve Renewable Efficiency</li>
+									</ul>
+								</div>
+								<!-- .card-content -->
+							</div>
+							<div class="back">
+								<div class="back_cont">
+									<h1>Optimize Costs</h1>
+									<p>
+										Avoid costly energy prices from local utilities by using
+										smart grid technologies
+									</p>
+									<h1>Backup Power</h1>
+									<p>
+										Prevent downtime or catastrophic power outages with a backup
+										power supply
+									</p>
+									<h1>Improve Renewable Efficiency</h1>
+									<p>
+										Battery storage improves energy efficiency of renewables by
+										storing all excess energy for future power consumption
+									</p>
+								</div>
+							</div>
+						</article>
+						<!-- .card -->
+
+						<article class="card" onclick="flip(event)">
+							<div class="front">
+								<picture class="thumbnail">
+									<img
+										src="./brochure-images/brochure-images/equipment.jpeg"
+										alt="A dinosaur wearing an aluminium jacket"
+									/>
+								</picture>
+								<div class="div_blur_teste"></div>
+								<div class="card-content">
+									<h1>Smart Facility</h1>
+									<hr />
+									<br />
+									<ul>
+										<li>Building Intelligence</li>
+										<li>Analytics</li>
+										<li>Fiber Optics</li>
+										<li>Cyber Security</li>
+									</ul>
+								</div>
+							</div>
+							<div class="back c3">
+								<div class="back_cont">
+									<h1>Building Intelligence</h1>
+									<p>
+										Smart meters track detailed energy consumption and provide
+										better decision making on data
+									</p>
+									<h1>Analytics</h1>
+									<p>
+										Gain new insights from data in how to improve building and
+										equipment efficiencies
+									</p>
+									<h1>Fiber Optics</h1>
+									<p>
+										Replacing ethernet wiring with fiber optic cabling improves
+										performance and reliability while reducing complexity and
+										costs
+									</p>
+									<h1>Cyber Security</h1>
+									<p>
+										Limit cyber risks by integrating cyber security measures
+										into local and cloud computer infrastructure
+									</p>
+								</div>
+							</div>
+						</article>
+
+
+
+
+
+
+                        <article class="card" onclick="flip(event)">
+							<div class="front">
+								<picture class="thumbnail">
+									<img src="./brochure-images/brochure-images/building.jpeg" />
+								</picture>
+								<div class="div_blur_teste"></div>
+								<div class="card-content">
+									<h1>Equipment Updates</h1>
+									<hr />
+									<br />
+									<ul>
+										<li>Heating & Cooling</li>
+										<li>Update Aging Equipment</li>
+										<li>Optimize Equipment</li>
+										<li>Cogeneration</li>
+									</ul>
+								</div>
+							</div>
+							<div class="back c3">
+								<h1>Heating & Cooling</h1>
+								<p>
+									Integrating new boilers and chillers can significantly
+									increase performance and immediately reduce costs
+								</p>
+								<h1>Update Aging Equipment</h1>
+								<p>
+									Antiquated, complex equipment is expensive to operate and
+									maintain
+								</p>
+								<h1>Optimize Equipment</h1>
+								<p>
+									Non-optimized and non-variable equipment delivers poor
+									performance
+								</p>
+
+								<h1>Cogeneration</h1>
+								<p>
+									Maximize efficiency by reusing and delivering hot/cold water
+									from onsite energy generation to reduce energy and water
+									consumption
+								</p>
+							</div>
+						</article>
+						<!-- .card -->
+
+						<article class="card" onclick="flip(event)">
+							<div class="front">
+								<picture class="thumbnail">
+									<img
+										src="./brochure-images/brochure-images/energy-storage2.jpeg"
+										alt="Norwegian boller"
+									/>
+								</picture>
+								<div class="div_blur_teste"></div>
+								<div class="card-content">
+									<h1>Building Upgrades</h1>
+									<hr />
+									<br />
+									<ul>
+										<li>HVAC</li>
+										<li>Building Envelope</li>
+										<li>Lighting</li>
+										<li>Piping</li>
+									</ul>
+								</div>
+							</div>
+							<div class="back c3">
+								<h1>HVAC</h1>
+								<p>
+									Modern HVAC systems provide significant cost savings, energy
+									reduction, and thermal efficiency
+								</p>
+								<h1>Building Envelope</h1>
+								<p>
+									Updating windows, roofs, insulation, and other physical
+									structures considerably improves building and equipment
+									efficiency
+								</p>
+								<h1>Lighting</h1>
+								<p>
+									Upgrading lighting can result in 50% reduction in lighting
+									energy usage
+								</p>
+								<h1>Piping</h1>
+								<p>
+									Upgrading and insulating pipes dramatically reduces heat loss
+								</p>
+							</div>
+						</article>
+						<!-- .card -->
+
+						<article class="card" onclick="flip(event)">
+							<div class="front">
+								<picture class="thumbnail">
+									<img
+										src="./brochure-images/brochure-images/rooftop-solar.jpeg"
+										alt="A dinosaur wearing an aluminium jacket"
+									/>
+								</picture>
+								<div class="div_blur_teste"></div>
+								<div class="card-content">
+									<h1>Automation & Controls</h1>
+									<hr />
+									<br />
+									<ul>
+										<li>Modernize</li>
+										<li>Link Hardware + Software</li>
+										<li>Sensors</li>
+										<li>Monitor</li>
+									</ul>
+								</div>
+							</div>
+							<div class="back">
+								<h1>Modernize</h1>
+								<p>
+									Outdated control systems bring unnecessary cost and complexity
+								</p>
+								<h1>Link Hardware + Software</h1>
+								<p>
+									Configure heating, cooling, lighting, and miscellaneous
+									equipment to be optimized for proper usage
+								</p>
+								<h1>Sensors</h1>
+								<p>
+									New generation sensors and hardware can intelligently adapt to
+									changing scenarios
+								</p>
+								<h1>Monitor</h1>
+								<p>
+									Monitor real time metrics to find anomalies, trends, and usage
+									patterns
+								</p>
+							</div>
+						</article>
