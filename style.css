@@ -116,38 +116,47 @@ nav a:hover {
 /* Hero section */
 
 #hero {
-	height: 100vh;
+	display: grid;
+	height: 70vh;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.hero_image{
+	background-image: url("./brochure-images/brochure-images/cover.jpeg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	width: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)),
-		url("./brochure-images/brochure-images/cover.jpeg") no-repeat center bottom /
-			cover;
-	color: whitesmoke;
-}
-.container {
-	width: 90%;
 	height: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: left;
 }
-#hero .info h2 {
-	font-size: 3rem;
+.hero_info{
+	background:#f1f2f3;
+	width: 100%;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero_info picture img {
+	width: 50%;
+	background:blue
+}
+#hero .hero_info h2 {
+	color: black;
+	font-size: 1rem;
 	margin-bottom: 1rem;
 }
-#hero .info h2 {
-	font-size: 3rem;
-	margin-bottom: 2rem;
-}
-#hero .info p {
-	font-size: 1.5rem;
-	max-width: 70%;
+
+#hero .hero_info p {
+	color: black;
 }
 @media only screen and (max-width: 768px) {
-	/* html {
-		font-size: 10px;
-	} */
+#hero{
+	grid-template-columns: repeat(1, 1fr);
+}
 }
 
 /* Service section cards */
@@ -193,7 +202,7 @@ strong {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.front{
+.front {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -215,7 +224,7 @@ strong {
 	width: 100%;
 }
 .front {
-	height: max-content;
+	/* height: max-content; */
 }
 .back {
 	background: white;
@@ -239,15 +248,17 @@ h1 {
 	font-weight: 400;
 	text-align: center;
 }
-
+.card_image {
+	height: 180.5px;
+}
 .card_image img {
-	height: auto;
+	height: 100%;
 	max-width: 100%;
 	vertical-align: middle;
 }
 
 .cards_item {
-	display: flex;
+	/* display: flex; */
 	/* padding: 1rem; */
 }
 
@@ -259,7 +270,7 @@ h1 {
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-between;
 	}
 	.card {
 		flex: 0 1 calc(50% - 1em);
@@ -281,7 +292,7 @@ h1 {
 .crd {
 	background-color: white;
 	border-radius: 0.25rem;
-
+	flex: 0 1 24%;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -290,7 +301,7 @@ h1 {
 .card_content {
 	padding: 1rem;
 	background: #141414;
-	/* height: 164px; */
+	height: 180.5px;
 }
 
 .card_title {
@@ -309,7 +320,7 @@ h1 {
 	margin-bottom: 1.25rem;
 	font-weight: 400;
 }
-.card_text ul{
+.card_text ul {
 	padding-left: 1rem;
 }
 
